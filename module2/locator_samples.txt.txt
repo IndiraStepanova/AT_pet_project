@@ -1,0 +1,5 @@
+input#firstname_id
+//input[@name="lastname_name"]
+input.email_class
+//input[@my_forth_attr="my_forth_text"]
+//input[@class="address_class"]
