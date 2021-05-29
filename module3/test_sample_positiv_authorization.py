@@ -42,10 +42,10 @@ def test_user_authorization():
         input_user_password = browser.find_element_by_css_selector(search_password_locator)
         input_user_password.send_keys(user_password)
         browser.find_element_by_css_selector(search_button_locator).click()
+        browser.find_element_by_css_selector(search_account_link_locator).click()
         
 
         # Assert
-        browser.find_element_by_css_selector(search_account_link_locator).click()
         user_logged = browser.find_element_by_css_selector(search_profile_locator)
         assert user_email in user_logged.text, "Введеный при авторизации логин не соответствует логину пользователя!"
 

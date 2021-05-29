@@ -1,18 +1,15 @@
 '''
 Пользовательский сценарий 1.1. Регистрация нового пользователя
 Тестовый сценарий 1.1.1. Регистрация нового пользователя
-Предусловия: открыта страница регистрации/авторизации http://selenium1py.pythonanywhere.com/ru/accounts/login/
-1. В блоке "Зарегистрироваться" ввод в поле "Адрес электронной почты" адреса электронной почты
-2. Ввод и подтверждение пароля удовлетворяющего требованиям
+1. В блоке "Зарегистрироваться" ввод в поле "Адрес электронной почты" адреса электронной почты (+)
+2. Ввод и подтверждение пароля удовлетворяющего требованиям (+)
 3. Нажать кнопку "Зарегистрироваться"
 
 Ожидаемый результат:
 1. Поля ввода активны
 2. Регистрация произведена
-3. На указанный адрес электронной почты пришла ссылка для подтверждения регистрации
 '''
 
-import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -40,7 +37,7 @@ def test_login_of_new_user():
         browser.implicitly_wait(5)
         browser.get(main_page_link)
 
-        search_input = browser.find_element_by_css_selector(search_redirect_to_login_link).click()
+        browser.find_element_by_css_selector(search_redirect_to_login_link).click()
         
         # Act
         input_user_email = browser.find_element_by_css_selector(search_email_locator)
@@ -55,7 +52,7 @@ def test_login_of_new_user():
         # Assert
         browser.find_element_by_css_selector(search_account_link_locator).click()
         user_logged = browser.find_element_by_css_selector(search_profile_locator)
-        assert user_email in user_logged.text, "Пользователь не зареган"
+        assert user_email in user_logged.text, "Email пользователя не соответствует указанному в учетной записи!"
 
     finally:
         browser.quit()
