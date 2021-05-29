@@ -66,7 +66,6 @@ search_submit_delete_profile = ".btn.btn-lg.btn-danger"
 search_profile_delete_message_locator = ".alertinner.wicon"
 
 # Data:
-#для запуска негативного теста передать иной логин/пароль
 user_email = "IIvanov@email.com"
 user_password = "!2wsxCDE#"
 
@@ -86,12 +85,13 @@ def check_reg_user(browser):
     repeat_user_password.send_keys(user_password)
     browser.find_element_by_css_selector(search_reg_button_locator).click()
 
-def check_auth_user(browser):
+def check_auth_user(browser, us_name, us_pass):
     input_user_email = browser.find_element_by_css_selector(search_auth_email_locator)
-    input_user_email.send_keys(user_email)
+    input_user_email.send_keys(us_name)
     input_user_password = browser.find_element_by_css_selector(search_auth_password_locator)
-    input_user_password.send_keys(user_password)
+    input_user_password.send_keys(us_pass)
     browser.find_element_by_css_selector(search_auth_button_locator).click()
+
 
 def test_reg_user():
     try:
@@ -112,7 +112,7 @@ def test_auth_user_negativ():
         # Arrange
         browser = open_browser()
         # Act
-        check_auth_user(browser)
+        check_auth_user(browser, "not_existed@mail.tu", "123")
         #Assert
         user_not_logged = browser.find_element_by_css_selector(search_alert_danger_locator)
         WebDriverWait(browser, 5).until(EC.visibility_of(user_not_logged))
@@ -126,7 +126,7 @@ def test_auth_user_positiv():
         # Arrange
         browser = open_browser()
         # Act
-        check_auth_user(browser)
+        check_auth_user(browser, user_email, user_password)
         
         browser.find_element_by_css_selector(search_account_link_locator).click()
         #Assert
@@ -139,7 +139,7 @@ def test_user_delete():
     try:
         #Arrange
         browser = open_browser()
-        check_auth_user(browser)
+        check_auth_user(browser, user_email, user_password)
         browser.find_element_by_css_selector(search_account_link_locator).click()
         #Act
         delete_button = WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, search_delete_button_locator)))
@@ -157,7 +157,6 @@ def test_user_delete():
 
 
 test_reg_user()
-#для запуска негативного теста передать иной логин/пароль
-#test_auth_user_negativ() 
+test_auth_user_negativ() 
 test_auth_user_positiv()
 test_user_delete()
