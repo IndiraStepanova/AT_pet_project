@@ -31,4 +31,4 @@ def test_registration_first(browser):
     browser.find_element_by_css_selector(search_account_link_locator).click()
     #Assert
     user_logged = browser.find_element_by_css_selector(search_profile_locator)
-    assert user_email in user_logged.text, "Email пользователя не соответствует указанному в учетной записи!"
+    assert user_email in user_logged.text, "The user's email address does not match the one specified in the account!"
