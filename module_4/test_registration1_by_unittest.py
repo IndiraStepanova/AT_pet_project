@@ -1,7 +1,5 @@
 
 import unittest
-from os import link
-from sys import argv
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
