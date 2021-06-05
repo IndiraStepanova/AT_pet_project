@@ -1,5 +1,4 @@
 #Common:
-main_page_link = "http://selenium1py.pythonanywhere.com/"
 search_redirect_to_login_link = "#login_link"
 search_account_link_locator = ".collapse > div > ul > li:nth-child(1) > a"
 search_profile_locator = "div > table > tbody :nth-child(2) > td"
