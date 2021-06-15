@@ -8,7 +8,7 @@ class LoginPageLocators():
     #Locators for auth:
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     LOGIN_USERNAME_FIELD = (By.CSS_SELECTOR, "#id_login-username")
-    LOGIN_PASSWORD_FIELD = (By.CSS_SELECTOR, "#id_login-password")
+    LOGIN_PASSWORD_FIELD = (By.CSS_SELECTOR, "#1id_login-password")
     LOGIN_SUBMIT_BUTTON = (By.CSS_SELECTOR, "[name = 'login_submit']")
     #Locators for registration:
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")

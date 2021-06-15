@@ -15,5 +15,12 @@ class BasePage():
         except (NoSuchElementException):
             return False
         return True
+    
+    def is_element_clicable(self, how, what):
+        try:
+            self.browser.find_element(how, what)
+        except (NoSuchElementException):
+            return False
+        return True
 
 
