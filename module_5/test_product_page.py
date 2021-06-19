@@ -4,8 +4,9 @@ from .pages.base_page import BasePage
 from .pages.login_page import LoginPage
 from .pages.product_page import ProductPage
 from .pages.basket_page import BasketPage
+import time
 
-link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
+link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/hacking-exposed-wireless_208/"
 
 @pytest.mark.login_guest
 class TestLoginFromProductPage():
@@ -30,7 +31,18 @@ class TestProductPage:
         basket_page = BasketPage(browser, browser.current_url)
         basket_page.should_be_basket_page(language)
 
+@pytest.mark.add_to_basket
 class TestUserAddToBasketFromProductPage():
+    @pytest.fixture(scope="function", autouse=True)
+    def setup(self, browser):
+        self.page = LoginPage(browser, link)
+        self.page.open()
+        self.page.go_to_login_page()
+        email = str(time.time()) + "@fakemail.org"
+        password = "!2wsxCDE#"
+        self.page.register_new_user(email, password)
+        self.page.should_be_authorized_user()
+       
     def test_user_cant_see_success_message(self, browser, language):
         promo_page = ProductPage(browser, link)
         promo_page.open() 
@@ -41,5 +53,4 @@ class TestUserAddToBasketFromProductPage():
         promo_page = ProductPage(browser, link)
         promo_page.open()
         promo_page.should_be_add_product_to_basket(language)
-        promo_page.solve_quiz_and_get_code()
         promo_page.compare_selected_and_added_product()
