@@ -2,6 +2,7 @@ from .base_page import BasePage
 from .locators import MainPageLocators
 from selenium.webdriver.common.by import By
 from .login_page import LoginPage
+from .product_page import ProductPage
 
 class MainPage(BasePage):
     def go_to_login_page(self):

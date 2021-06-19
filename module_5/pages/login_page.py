@@ -1,4 +1,3 @@
-from module_4.test_lesson7_step2 import browser
 from .base_page import BasePage
 from .locators import LoginPageLocators
 
