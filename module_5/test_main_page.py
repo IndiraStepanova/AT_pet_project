@@ -8,7 +8,7 @@ import time
 
 link = "http://selenium1py.pythonanywhere.com/"
 
-promo_link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
+promo_link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
 
 class TestMainPage:
     """ def test_guest_can_go_to_login_page(self, browser):
@@ -24,11 +24,13 @@ class TestMainPage:
         page.open()
         page.should_be_login_link() """
 
-    def test_guest_can_add_product_to_basket(self, browser, language):
-        promo_page = ProductPage(browser, promo_link)
+    @pytest.mark.parametrize('promo_offer', ["offer1"])
+    def test_guest_can_add_product_to_basket(self, browser, language, promo_offer):
+        promo_page = ProductPage(browser, promo_link+f"/?{promo_offer}")
         promo_page.open()
         promo_page.should_be_add_product_to_basket(language)
-        promo_page.solve_quiz_and_get_code()
+        #promo_page.solve_quiz_and_get_code()
         promo_page.compare_selected_and_added_product()
+        
         
    

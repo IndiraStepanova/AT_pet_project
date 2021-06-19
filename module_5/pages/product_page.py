@@ -31,12 +31,12 @@ class ProductPage(BasePage):
     def compare_selected_product_name_and_added_product_name(self):
         product_added_allert = self.get_element_text(*ProductPageLocators.PRODUCT_ADDED_ALLERT_MESSAGE)
         product_name = self.get_element_text(*ProductPageLocators.NAME_OF_PRODUCT)
-        assert product_name in product_added_allert, "Selected and added product name do not match!"
+        assert product_name == product_added_allert, "Selected and added product name do not match!"
     
     def compare_selected_product_price_and_added_product_price(self):
         product_price_allert = self.get_element_text(*ProductPageLocators.PRODUCT_PRICE_ALLERT_MESSAGE)
         product_price = self.get_element_text(*ProductPageLocators.PRICE_OF_PRODUCT)
-        assert product_price in product_price_allert, "Selected and added product price do not match!"
+        assert product_price == product_price_allert, "Selected and added product price do not match!"
         
 
 
