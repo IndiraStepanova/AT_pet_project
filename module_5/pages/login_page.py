@@ -1,8 +1,7 @@
 from .base_page import BasePage
 from .locators import LoginPageLocators
+import time
 
-user_email = 
-user_password = 
 
 class LoginPage(BasePage):
     def register_new_user(self, email, password):
@@ -12,7 +11,7 @@ class LoginPage(BasePage):
         password_field.send_keys(password)
         re_password_field = self.browser.find_element(*LoginPageLocators.REGISTER_PASSWORD_REPEAT_FIELD)
         re_password_field.send_keys(password)
-        submit_button = self.browser.find_element(*LoginPageLocators.REGISTER_PASSWORD_FIELD)
+        submit_button = self.browser.find_element(*LoginPageLocators.REGISTER_SUBMIT_BUTTON)
         submit_button.click()
 
 
