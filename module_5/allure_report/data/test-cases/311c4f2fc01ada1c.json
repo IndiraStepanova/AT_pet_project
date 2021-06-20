@@ -1,0 +1,134 @@
+{
+  "uid" : "311c4f2fc01ada1c",
+  "name" : "test_guest_cant_see_product_in_basket_opened_from_product_page",
+  "fullName" : "selenium_course.stepik_lessons.module_5.test_product_page.TestProductPage#test_guest_cant_see_product_in_basket_opened_from_product_page",
+  "historyId" : "a290b4404e9edbea9e1fdc2c96aa2ea4",
+  "time" : {
+    "start" : 1624148348719,
+    "stop" : 1624148371414,
+    "duration" : 22695
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "language",
+    "time" : {
+      "start" : 1624148204242,
+      "stop" : 1624148204242,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1624148347457,
+      "stop" : 1624148348719,
+      "duration" : 1262
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser_name",
+    "time" : {
+      "start" : 1624148204242,
+      "stop" : 1624148204242,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "28471d31b632fb96",
+      "name" : "stdout",
+      "source" : "28471d31b632fb96.txt",
+      "type" : "text/plain",
+      "size" : 81
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1624148371415,
+      "stop" : 1624148373665,
+      "duration" : 2250
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "product_in_basket"
+  }, {
+    "name" : "parentSuite",
+    "value" : "selenium_course.stepik_lessons.module_5"
+  }, {
+    "name" : "suite",
+    "value" : "test_product_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProductPage"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-H6DTE3N3"
+  }, {
+    "name" : "thread",
+    "value" : "10508-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "selenium_course.stepik_lessons.module_5.test_product_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "product_in_basket" ]
+  },
+  "source" : "311c4f2fc01ada1c.json",
+  "parameterValues" : [ ]
+}

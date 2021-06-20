@@ -1,0 +1,141 @@
+{
+  "uid" : "d3e13d676f61b8a9",
+  "name" : "test_message_disappeared_after_adding_product_to_basket",
+  "fullName" : "selenium_course.stepik_lessons.module_5.test_main_page.TestAddToBasketMessages#test_message_disappeared_after_adding_product_to_basket",
+  "historyId" : "f55a5554667845178663a0e5a3e6cdc4",
+  "time" : {
+    "start" : 1624148241460,
+    "stop" : 1624148249844,
+    "duration" : 8384
+  },
+  "status" : "skipped",
+  "statusMessage" : "XFAIL\n\nAssertionError: Success message is presented, but should not be",
+  "statusTrace" : "self = <module_5.test_main_page.TestAddToBasketMessages object at 0x0000018C90369E48>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"f9f61e344c8dae1954811cde9cd6f900\")>\nlanguage = 'en-gb'\n\n    @pytest.mark.xfail\n    def test_message_disappeared_after_adding_product_to_basket(self, browser, language):\n        promo_page = ProductPage(browser, promo_link)\n        promo_page.open()\n        promo_page.should_be_add_product_to_basket(language)\n        # Проверяем, что нет сообщения об успехе с помощью is_disappeared:\n>       promo_page.should_be_success_message_is_disappeared()\n\nselenium_course\\stepik_lessons\\module_5\\test_main_page.py:49: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <module_5.pages.product_page.ProductPage object at 0x0000018C90369B48>\n\n    def should_be_success_message_is_disappeared(self):\n>       assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \"Success message is presented, but should not be\"\nE       AssertionError: Success message is presented, but should not be\n\nselenium_course\\stepik_lessons\\module_5\\pages\\product_page.py:44: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1624148240140,
+      "stop" : 1624148241460,
+      "duration" : 1320
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "language",
+    "time" : {
+      "start" : 1624148204242,
+      "stop" : 1624148204242,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser_name",
+    "time" : {
+      "start" : 1624148204242,
+      "stop" : 1624148204242,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "skipped",
+    "statusMessage" : "XFAIL\n\nAssertionError: Success message is presented, but should not be",
+    "statusTrace" : "self = <module_5.test_main_page.TestAddToBasketMessages object at 0x0000018C90369E48>\nbrowser = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"f9f61e344c8dae1954811cde9cd6f900\")>\nlanguage = 'en-gb'\n\n    @pytest.mark.xfail\n    def test_message_disappeared_after_adding_product_to_basket(self, browser, language):\n        promo_page = ProductPage(browser, promo_link)\n        promo_page.open()\n        promo_page.should_be_add_product_to_basket(language)\n        # Проверяем, что нет сообщения об успехе с помощью is_disappeared:\n>       promo_page.should_be_success_message_is_disappeared()\n\nselenium_course\\stepik_lessons\\module_5\\test_main_page.py:49: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <module_5.pages.product_page.ProductPage object at 0x0000018C90369B48>\n\n    def should_be_success_message_is_disappeared(self):\n>       assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \"Success message is presented, but should not be\"\nE       AssertionError: Success message is presented, but should not be\n\nselenium_course\\stepik_lessons\\module_5\\pages\\product_page.py:44: AssertionError",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "3b067d50bdc204a2",
+      "name" : "stdout",
+      "source" : "3b067d50bdc204a2.txt",
+      "type" : "text/plain",
+      "size" : 31
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true
+  },
+  "afterStages" : [ {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1624148249857,
+      "stop" : 1624148252102,
+      "duration" : 2245
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail"
+  }, {
+    "name" : "tag",
+    "value" : "messages"
+  }, {
+    "name" : "parentSuite",
+    "value" : "selenium_course.stepik_lessons.module_5"
+  }, {
+    "name" : "suite",
+    "value" : "test_main_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAddToBasketMessages"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-H6DTE3N3"
+  }, {
+    "name" : "thread",
+    "value" : "10508-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "selenium_course.stepik_lessons.module_5.test_main_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail", "messages" ]
+  },
+  "source" : "d3e13d676f61b8a9.json",
+  "parameterValues" : [ ]
+}

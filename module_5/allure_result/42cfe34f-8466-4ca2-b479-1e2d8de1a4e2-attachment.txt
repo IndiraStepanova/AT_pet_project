@@ -1,0 +1,4 @@
+
+basket header: Basket
+
+basket messages: Your basket is empty. Continue shopping

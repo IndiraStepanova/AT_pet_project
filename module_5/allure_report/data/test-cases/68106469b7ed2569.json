@@ -1,0 +1,149 @@
+{
+  "uid" : "68106469b7ed2569",
+  "name" : "test_user_can_add_product_to_basket",
+  "fullName" : "selenium_course.stepik_lessons.module_5.test_product_page.TestUserAddToBasketFromProductPage#test_user_can_add_product_to_basket",
+  "historyId" : "f6a7b1ade0f39ad088d69b08a1e47efa",
+  "time" : {
+    "start" : 1624148401319,
+    "stop" : 1624148403271,
+    "duration" : 1952
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1624148395671,
+      "stop" : 1624148401318,
+      "duration" : 5647
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "language",
+    "time" : {
+      "start" : 1624148204242,
+      "stop" : 1624148204242,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1624148394415,
+      "stop" : 1624148395670,
+      "duration" : 1255
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "browser_name",
+    "time" : {
+      "start" : 1624148204242,
+      "stop" : 1624148204242,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "1ad671d972a3e7c8",
+      "name" : "stdout",
+      "source" : "1ad671d972a3e7c8.txt",
+      "type" : "text/plain",
+      "size" : 31
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1624148403272,
+      "stop" : 1624148405792,
+      "duration" : 2520
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "add_to_basket"
+  }, {
+    "name" : "parentSuite",
+    "value" : "selenium_course.stepik_lessons.module_5"
+  }, {
+    "name" : "suite",
+    "value" : "test_product_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestUserAddToBasketFromProductPage"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-H6DTE3N3"
+  }, {
+    "name" : "thread",
+    "value" : "10508-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "selenium_course.stepik_lessons.module_5.test_product_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "add_to_basket" ]
+  },
+  "source" : "68106469b7ed2569.json",
+  "parameterValues" : [ ]
+}

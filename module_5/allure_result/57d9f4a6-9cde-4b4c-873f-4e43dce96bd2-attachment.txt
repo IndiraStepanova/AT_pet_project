@@ -1,0 +1,3 @@
+
+text of button: Add to basket
+No second alert presented

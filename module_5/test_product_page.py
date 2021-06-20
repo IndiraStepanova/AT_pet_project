@@ -22,7 +22,7 @@ class TestLoginFromProductPage():
         login_page = LoginPage(browser, browser.current_url)
         login_page.should_be_login_page()
 
-
+@pytest.mark.product_in_basket
 class TestProductPage:
     def test_guest_cant_see_product_in_basket_opened_from_product_page(self, browser, language):
         page = ProductPage(browser, link)  # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес 
@@ -42,12 +42,12 @@ class TestUserAddToBasketFromProductPage():
         password = "!2wsxCDE#"
         self.page.register_new_user(email, password)
         self.page.should_be_authorized_user()
-       
-    def test_user_cant_see_success_message(self, browser, language):
+    
+    def test_user_cant_see_success_message(self, browser):
         promo_page = ProductPage(browser, link)
         promo_page.open() 
         # Проверяем, что нет сообщения об успехе с помощью is_not_element_present:
-        promo_page.should_not_be_success_message(language)
+        promo_page.should_not_be_success_message()
 
     def test_user_can_add_product_to_basket(self, browser, language):
         promo_page = ProductPage(browser, link)
