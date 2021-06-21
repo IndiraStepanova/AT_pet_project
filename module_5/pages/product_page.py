@@ -24,7 +24,8 @@ class ProductPage(BasePage):
         assert button_text in expected_button_text[language], "Incorrect text of button!"
             
     def add_product_to_basket(self):
-        self.click_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON)
+        add_button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON)
+        add_button.click()
     
     def compare_selected_product_name_and_added_product_name(self):
         product_added_allert = self.get_element_text(*ProductPageLocators.PRODUCT_ADDED_ALLERT_MESSAGE)

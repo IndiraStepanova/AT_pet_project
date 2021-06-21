@@ -13,8 +13,8 @@ class BasePage():
         self.url = url
         self.browser.implicitly_wait(timeout)
 
-    def click_element(self, how, what):
-        return self.browser.find_element(how, what).click()
+    # def click_element(self, how, what):
+    #     return self.browser.find_element(how, what).click()
 
     def get_element_text(self, how, what):
         return self.browser.find_element(how, what).text
