@@ -11,10 +11,6 @@ expected_button_text = {
 
 
 class ProductPage(BasePage):
-    def should_be_add_product_to_basket(self, language):
-        self.should_be_add_to_basket_button(language)
-        self.add_product_to_basket()
-
     def compare_selected_and_added_product(self):
         self.compare_selected_product_name_and_added_product_name()
         self.compare_selected_product_price_and_added_product_price()

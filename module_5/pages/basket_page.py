@@ -29,8 +29,6 @@ class BasketPage(BasePage):
     def should_be_basket_header(self, language):
         basket_header = self.get_element_text(
             *BasketPageLocators.BASKET_PAGE_HEADER)
-        print("\nbasket header: " + self.get_element_text(*
-              BasketPageLocators.BASKET_PAGE_HEADER))
         assert basket_header in expected_basket_page_header[
             language], "Basket page header does not match to locale!"
 
@@ -43,6 +41,4 @@ class BasketPage(BasePage):
     def should_be_empty_basket_message(self, language):
         empty_basket_message = self.get_element_text(
             *BasketPageLocators.EMPTY_BASKET_MESSAGE)
-        print("\nbasket messages: " + self.get_element_text(*
-              BasketPageLocators.EMPTY_BASKET_MESSAGE))
         assert expected_empty_basket_message[language] in empty_basket_message, "There is not empty basket message!"
