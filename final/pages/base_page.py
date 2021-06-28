@@ -23,6 +23,11 @@ class BasePage():
     def go_to_basket_page(self):
         link = self.browser.find_element(*BasketPageLocators.BASKET_LINK)
         link.click()
+    
+    def go_to_account_page(self):
+        link = self.browser.find_element(*BasePageLocators.ACCOUNT_LINK)
+        link.click()
+
 
     # убедиться, что элемент исчезает в заданный timeout
     def is_disappeared(self, how, what, timeout=4):

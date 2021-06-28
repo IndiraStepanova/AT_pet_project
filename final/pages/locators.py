@@ -1,9 +1,25 @@
 from selenium.webdriver.common.by import By
 
+class AccountPageLocators():
+    ACCOUNT_PAGE_HEADER = (By.CSS_SELECTOR, ".page-header.action h1")
+    CHANGE_PASSWORD_BUTTON = (By.CSS_SELECTOR, ".page_inner .row a:nth-child(5)")
+    EDIT_PROFILE_BUTTON = (By.CSS_SELECTOR, ".page_inner .row a:nth-child(6)")
+    DELETE_PROFILE_BUTTON = (By.CSS_SELECTOR, ".page_inner .row a:nth-child(7)")
+    
+    #Locators for change password
+    OLD_PASSWORD = (By.CSS_SELECTOR, "#id_old_password")
+    NEW_PASSWORD = (By.CSS_SELECTOR, "#id_new_password1")
+    NEW_PASSWORD_CONFIRMATION = (By.CSS_SELECTOR, "#id_new_password2")
+    CHANGE_PASSWORD_SUBMIT = (By.CSS_SELECTOR, "#change_password_form [type = 'submit']")
+    CHANGE_PASSWORD_CANCEL = (By.CSS_SELECTOR, "#change_password_form > div:nth-child(5) a")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages .alert-success .alertinner")
+    #Locators for edit profile
+    #Locators for delete profile
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    ACCOUNT_LINK = (By.CSS_SELECTOR, ".navbar-right >li:nth-child(1) > a")
 
 
 class MainPageLocators():
