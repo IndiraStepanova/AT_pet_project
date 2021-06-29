@@ -100,8 +100,6 @@ class AccountPage(BasePage):
     def should_not_be_success_message(self):
         assert self.is_not_element_present(*AccountPageLocators.SUCCESS_MESSAGE), \
             "Success message is presented, but should not be!"
-
-
-
-# def test_user_can_logout(self, browser):
-#         assert True
+    
+    def user_can_logout(self):
+        self.go_to_logout_link()

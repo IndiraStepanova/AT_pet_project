@@ -30,6 +30,7 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     ACCOUNT_LINK = (By.CSS_SELECTOR, ".navbar-right >li:nth-child(1) > a")
+    LOGOUT_LINK = (By.CSS_SELECTOR, "a#logout_link")
 
 
 class MainPageLocators():

@@ -28,6 +28,9 @@ class BasePage():
         link = self.browser.find_element(*BasePageLocators.ACCOUNT_LINK)
         link.click()
 
+    def go_to_logout_link(self):
+        link = self.browser.find_element(*BasePageLocators.LOGOUT_LINK)
+        link.click()
 
     # убедиться, что элемент исчезает в заданный timeout
     def is_disappeared(self, how, what, timeout=4):
@@ -61,6 +64,10 @@ class BasePage():
     def should_be_authorized_user(self):
         assert self.is_element_present(*LoginPageLocators.USER_ICON), "User icon is not presented," \
             " probably unauthorised user"
+
+    def should_be_unauthorized_user(self):
+        assert self.is_not_element_present(*LoginPageLocators.USER_ICON), "User icon is presented," \
+            " but should not be!"        
 
     def should_be_login_link(self):
         assert self.is_element_present(
