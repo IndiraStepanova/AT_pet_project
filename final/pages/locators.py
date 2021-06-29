@@ -5,17 +5,27 @@ class AccountPageLocators():
     CHANGE_PASSWORD_BUTTON = (By.CSS_SELECTOR, ".page_inner .row a:nth-child(5)")
     EDIT_PROFILE_BUTTON = (By.CSS_SELECTOR, ".page_inner .row a:nth-child(6)")
     DELETE_PROFILE_BUTTON = (By.CSS_SELECTOR, ".page_inner .row a:nth-child(7)")
-    
-    #Locators for change password
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages .alert-success .alertinner")
+
+class ChangePasswordPageLocators():    
     OLD_PASSWORD = (By.CSS_SELECTOR, "#id_old_password")
     NEW_PASSWORD = (By.CSS_SELECTOR, "#id_new_password1")
     NEW_PASSWORD_CONFIRMATION = (By.CSS_SELECTOR, "#id_new_password2")
     CHANGE_PASSWORD_SUBMIT = (By.CSS_SELECTOR, "#change_password_form [type = 'submit']")
     CHANGE_PASSWORD_CANCEL = (By.CSS_SELECTOR, "#change_password_form > div:nth-child(5) a")
-    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages .alert-success .alertinner")
-    #Locators for edit profile
-    #Locators for delete profile
+    
+class EditProfilePageLocators():    
+    NEW_NAME = (By.CSS_SELECTOR, "#id_first_name")
+    NEW_LASTNAME = (By.CSS_SELECTOR, "#id_last_name")
+    NEW_EMAIL = (By.CSS_SELECTOR, "#id_email")
+    EDIT_PROFILE_SUBMIT = (By.CSS_SELECTOR, "#profile_form [type = 'submit']")
+    EDIT_PROFILE_CANCEL = (By.CSS_SELECTOR, "#profile_form > div:nth-child(5) a")
 
+class DeleteProfilePageLocators():    
+    USER_PASSWORD = (By.CSS_SELECTOR, "#delete_profile_form #id_password")
+    DELETE_PROFILE_SUBMIT = (By.CSS_SELECTOR, "#delete_profile_form [type = 'submit']")
+    DELETE_PROFILE_CANCEL = (By.CSS_SELECTOR, "#delete_profile_form > div:nth-child(4) a")
+    
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
