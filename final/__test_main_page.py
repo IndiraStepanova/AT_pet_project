@@ -88,4 +88,4 @@ class TestMainPage():
         page.go_to_basket_page()
         basket_page = BasketPage(browser, browser.current_url)
         # Assert
-        basket_page.should_be_basket_page(language)
+        basket_page.should_be_empty_basket_page(language)

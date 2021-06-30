@@ -16,6 +16,18 @@ class LoginPage(BasePage):
         submit_button = self.browser.find_element(
             *LoginPageLocators.REGISTER_SUBMIT_BUTTON)
         submit_button.click()
+    
+    def login_user(self, email, password):
+        email_field = self.browser.find_element(
+            *LoginPageLocators.LOGIN_USERNAME_FIELD)
+        email_field.send_keys(email)
+        password_field = self.browser.find_element(
+            *LoginPageLocators.LOGIN_PASSWORD_FIELD)
+        password_field.send_keys(password)
+        submit_button = self.browser.find_element(
+            *LoginPageLocators.LOGIN_SUBMIT_BUTTON)
+        submit_button.click()
+
 
     def should_be_login_page(self):
         self.should_be_login_url()

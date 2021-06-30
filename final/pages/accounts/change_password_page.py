@@ -1,9 +1,9 @@
 from .account_page import AccountPage
 from ..locators import ChangePasswordPageLocators
 
-expected_change_password_button_text = {
+expected_change_password_page_header = {
     "ru": "Изменить пароль",
-    "en-gb": "Change password",
+    "en-gb": "Change Password",
     "fr": "Modifier le mot de passe",
     "es": "Cambiar contraseña",
 }
@@ -13,7 +13,12 @@ class ChangePasswordPage(AccountPage):
     def should_be_change_password_page_url(self):
         assert "accounts/change-password" in self.browser.current_url, "It is not change password page URL!"
 
-    def should_be_fields_for_changing_password(self, old_password, new_password):
+    def should_be_change_password_page_header(self, language):
+        change_password_page = self.get_element_text(*ChangePasswordPageLocators.CHANGE_PASSWORD_PAGE_HEADER)
+        assert change_password_page in expected_change_password_page_header[
+        language], "Header of change password page does not match to locale!"
+
+    def fill_fields_of_changing_password_form(self, old_password, new_password):
         old_password_input = self.browser.find_element(
             *ChangePasswordPageLocators.OLD_PASSWORD)
         old_password_input.send_keys(old_password)

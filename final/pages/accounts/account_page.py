@@ -2,7 +2,7 @@ from ..base_page import BasePage
 from ..locators import AccountPageLocators
 
 
-expected_profile_page_header_button_text = {
+expected_profile_page_header_text = {
     "ru": "Профиль",
     "en-gb": "Profile",
     "fr": "Profil",
@@ -45,7 +45,7 @@ class AccountPage(BasePage):
     def should_be_profile_page_header(self, language):
         account_page_header = self.get_element_text(
             *AccountPageLocators.ACCOUNT_PAGE_HEADER)
-        assert account_page_header in expected_profile_page_header_button_text[
+        assert account_page_header in expected_profile_page_header_text[
             language], "Header of page does not match to locale!"
 
     def should_be_password_change_link(self, language):
@@ -100,6 +100,6 @@ class AccountPage(BasePage):
     def should_not_be_success_message(self):
         assert self.is_not_element_present(*AccountPageLocators.SUCCESS_MESSAGE), \
             "Success message is presented, but should not be!"
-    
+
     def user_can_logout(self):
         self.go_to_logout_link()

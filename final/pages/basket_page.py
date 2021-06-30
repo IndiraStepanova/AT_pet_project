@@ -17,7 +17,7 @@ expected_empty_basket_message = {
 
 
 class BasketPage(BasePage):
-    def should_be_basket_page(self, language):
+    def should_be_empty_basket_page(self, language):
         self.should_be_basket_url()
         self.should_be_basket_header(language)
         self.should_be_empty_basket_form()

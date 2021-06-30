@@ -1,10 +1,23 @@
 from .account_page import AccountPage
 from ..locators import EditProfilePageLocators
 
+expected_edit_profile_header = {
+    "ru": "Редактировать профиль",
+    "en-gb": "Edit Profile",
+    "fr": "Modifier le profil",
+    "es": "Editar perfil",
+}
+
 
 class EditProfilePage(AccountPage):
     def should_be_edit_profile_page_url(self):
         assert "accounts/profile/edit/" in self.browser.current_url, "It is not edit profile page URL!"
+
+    def should_be_edit_profile_page_header(self, language):
+        edit_profile_page = self.get_element_text(
+            *EditProfilePageLocators.EDIT_PROFILE_PAGE_HEADER)
+        assert edit_profile_page in expected_edit_profile_header[
+            language], "Header of edit profile page does not match to locale!"
 
     def should_be_fields_for_edit_profile(self, new_name, new_surname, new_email):
         new_name_input = self.browser.find_element(
