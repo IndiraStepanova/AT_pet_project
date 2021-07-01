@@ -15,7 +15,7 @@ password = "!2wsxCDE#"
 another_password = "#EDCxsw2!"
 
 
-# @pytest.mark.personal_tests
+@pytest.mark.personal_tests
 class TestUserCanOpenAccountPage():
     @pytest.fixture(scope="function", autouse=True)
     # Arrange
@@ -34,7 +34,7 @@ class TestUserCanOpenAccountPage():
         # Assert
         account_page.should_be_main_account_page(language)
 
-# @pytest.mark.personal_tests
+@pytest.mark.personal_tests
 class TestAccountPage():
     @pytest.fixture(scope="function", autouse=True)
     # Arrange

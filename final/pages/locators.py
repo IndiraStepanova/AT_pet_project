@@ -1,34 +1,46 @@
 from selenium.webdriver.common.by import By
 
+
 class AccountPageLocators():
     ACCOUNT_PAGE_HEADER = (By.CSS_SELECTOR, ".page-header.action h1")
-    CHANGE_PASSWORD_BUTTON = (By.CSS_SELECTOR, ".page_inner .row a:nth-child(5)")
+    CHANGE_PASSWORD_BUTTON = (
+        By.CSS_SELECTOR, ".page_inner .row a:nth-child(5)")
     EDIT_PROFILE_BUTTON = (By.CSS_SELECTOR, ".page_inner .row a:nth-child(6)")
-    DELETE_PROFILE_BUTTON = (By.CSS_SELECTOR, ".page_inner .row a:nth-child(7)")
+    DELETE_PROFILE_BUTTON = (
+        By.CSS_SELECTOR, ".page_inner .row a:nth-child(7)")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages .alert-success .alertinner")
 
+
 class ChangePasswordPageLocators():
-    CHANGE_PASSWORD_PAGE_HEADER = (By.CSS_SELECTOR, ".page-header.action h1")   
+    CHANGE_PASSWORD_PAGE_HEADER = (By.CSS_SELECTOR, ".page-header.action h1")
     OLD_PASSWORD = (By.CSS_SELECTOR, "#id_old_password")
     NEW_PASSWORD = (By.CSS_SELECTOR, "#id_new_password1")
     NEW_PASSWORD_CONFIRMATION = (By.CSS_SELECTOR, "#id_new_password2")
-    CHANGE_PASSWORD_SUBMIT = (By.CSS_SELECTOR, "#change_password_form [type = 'submit']")
-    CHANGE_PASSWORD_CANCEL = (By.CSS_SELECTOR, "#change_password_form > div:nth-child(5) a")
-    
+    CHANGE_PASSWORD_SUBMIT = (
+        By.CSS_SELECTOR, "#change_password_form [type = 'submit']")
+    CHANGE_PASSWORD_CANCEL = (
+        By.CSS_SELECTOR, "#change_password_form > div:nth-child(5) a")
+
+
 class EditProfilePageLocators():
-    EDIT_PROFILE_PAGE_HEADER = (By.CSS_SELECTOR, ".page-header.action h1")   
+    EDIT_PROFILE_PAGE_HEADER = (By.CSS_SELECTOR, ".page-header.action h1")
     NEW_NAME = (By.CSS_SELECTOR, "#id_first_name")
     NEW_LASTNAME = (By.CSS_SELECTOR, "#id_last_name")
     NEW_EMAIL = (By.CSS_SELECTOR, "#id_email")
     EDIT_PROFILE_SUBMIT = (By.CSS_SELECTOR, "#profile_form [type = 'submit']")
-    EDIT_PROFILE_CANCEL = (By.CSS_SELECTOR, "#profile_form > div:nth-child(5) a")
+    EDIT_PROFILE_CANCEL = (
+        By.CSS_SELECTOR, "#profile_form > div:nth-child(5) a")
 
-class DeleteProfilePageLocators():   
-    DELETE_PROFILE_PAGE_HEADER = (By.CSS_SELECTOR, ".page-header.action h1")  
+
+class DeleteProfilePageLocators():
+    DELETE_PROFILE_PAGE_HEADER = (By.CSS_SELECTOR, ".page-header.action h1")
     USER_PASSWORD = (By.CSS_SELECTOR, "#delete_profile_form #id_password")
-    DELETE_PROFILE_SUBMIT = (By.CSS_SELECTOR, "#delete_profile_form [type = 'submit']")
-    DELETE_PROFILE_CANCEL = (By.CSS_SELECTOR, "#delete_profile_form > div:nth-child(4) a")
-    
+    DELETE_PROFILE_SUBMIT = (
+        By.CSS_SELECTOR, "#delete_profile_form [type = 'submit']")
+    DELETE_PROFILE_CANCEL = (
+        By.CSS_SELECTOR, "#delete_profile_form > div:nth-child(4) a")
+
+
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
@@ -66,6 +78,15 @@ class ProductPageLocators():
         By.CSS_SELECTOR, "#messages div:nth-child(1) strong")
     PRODUCT_PRICE_ALLERT_MESSAGE = (
         By.CSS_SELECTOR, "#messages div:nth-child(3) strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages .alert-success .alertinner")
+
+
+class CataloguePageLocators():
+    ADD_TO_BASKET_FROM_COMMON_PAGE = (
+        By.CSS_SELECTOR, "li:nth-child(1) .product_pod .product_price button.btn.btn-primary")
+    SUM_OF_BASKET = (By.CSS_SELECTOR, "div .basket-mini>strong")
+    PRICE_OF_GOODS = (
+        By.CSS_SELECTOR, "li:nth-child(1) .product_pod .product_price .price_color")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages .alert-success .alertinner")
 
 
