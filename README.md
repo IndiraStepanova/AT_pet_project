@@ -1,2 +1,2 @@
 Hi everyone!
-This is repository for my first UI tests I'm developing in Stepik course
+This is repository for my first UI autotests for on-line shop
